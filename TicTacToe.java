@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class TicTacToe
 {
     int play_count; // number of plays
@@ -22,15 +24,22 @@ public class TicTacToe
     public static void main(String[] args) {
         TicTacToe game = new TicTacToe();
 
-        game.printKey();
-
-        System.out.println();
-        
         game.printBoard();
+
+        // wait for input
+        Scanner scan = new Scanner(System.in);
+
+        scan.nextLine();
+
+        scan.close();
     }
 
     public void printBoard()
     {
+        // Flush screen
+        System.out.print("\033[H\033[2J"); 
+        System.out.flush();
+
         // Print top line
         System.out.println("+-+-+-+");
 
