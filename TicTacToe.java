@@ -12,20 +12,73 @@ public class TicTacToe
         // Set board to spaces
         for (int i = 0; i < 3; i++)
         {
-            for (int j = 0; j <= i; j++)
+            for (int j = 0; j < 3; j++)
             {
                 board[i][j] = ' ';
             }
         }
     }
 
+    public static void main(String[] args) {
+        TicTacToe game = new TicTacToe();
+
+        game.printKey();
+
+        System.out.println();
+        
+        game.printBoard();
+    }
+
     public void printBoard()
     {
-        
+        // Print top line
+        System.out.println("+-+-+-+");
+
+        // Print left pipe to start new row
+        System.out.print("|");
+
+        // Print first row
+        for (int i = 0; i < 3; i++)
+        {
+            System.out.print(board[0][i]);
+            System.out.print("|");
+        }
+        System.out.println();
+
+        // Print next line
+        System.out.println("+-+-+-+");
+
+        // Print left pipe to start new row
+        System.out.print("|");
+
+        // Print second row
+        for (int i = 0; i < 3; i++)
+        {
+            System.out.print(board[1][i]);
+            System.out.print("|");
+        }
+        System.out.println();
+
+        // Print next line
+        System.out.println("+-+-+-+");
+
+        // Print left pipe to start new row
+        System.out.print("|");
+
+        // Print last row
+        for (int i = 0; i < 3; i++)
+        {
+            System.out.print(board[2][i]);
+            System.out.print("|");
+        }
+        System.out.println();
+
+        // Print closing line
+        System.out.println("+-+-+-+");
     }
 
     public void printKey()
     {
-        System.out.println();
+        System.out.println("+-+-+-+\n|1|2|3|\n+-+-+-+\n|4|5|6|\n+-+-+-+\n|7|8|9|\n+-+-+-+");
     }
 }
